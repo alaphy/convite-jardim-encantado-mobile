@@ -4,7 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite Jardim Encantado</title>
+
+
+
   <style>
+
+.foto-aniversariante {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.foto-aniversariante img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* deixa redonda */
+  border: 4px solid #ff9edb; /* borda rosa */
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+}
+
+
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive;
@@ -70,18 +89,18 @@
     /* Animações */
     .butterfly {
       position: absolute;
-      width: 40px;
-      height: 40px;
-      background: url("assets/butterfly.png") no-repeat center/contain;
+      width: 60px;
+      height: 60px;
+      background: url("assets/borboleta.png") no-repeat center/contain;
       animation: fly 12s linear infinite;
       opacity: 0.8;
     }
 
     .flower {
       position: absolute;
-      width: 50px;
-      height: 50px;
-      background: url("assets/flower.png") no-repeat center/contain;
+      width: 60px;
+      height: 60px;
+      background: url("assets/passaro.png") no-repeat center/contain;
       animation: float 15s ease-in-out infinite;
       opacity: 0.6;
     }
@@ -101,6 +120,8 @@
       from { opacity: 0; transform: scale(0.8); }
       to { opacity: 1; transform: scale(1); }
     }
+
+
   </style>
 </head>
 <body>
@@ -110,16 +131,19 @@
 
   <div class="card">
     <h1>🌸 Jardim Encantado 🌸</h1>
+    <div class="foto-aniversariante">
+  <img src="assets/foto-aniversariante.jpeg" alt="Aniversariante" class="foto">
+</div>
     <p>Venha comemorar comigo meu <b>1º aninho</b>!</p>
-    <p><b>Data:</b> 13/09/2025</p>
-    <p><b>Local:</b> Salão Encantado, Rua das Borboletas, 123</p>
-    <a href="https://wa.me/5599999999999?text=Confirmo%20presença%20no%20aniversário!" class="btn">Confirmar presença</a>
+    <p><b>Data:</b> 13/09/2025, Sábado</p>
+    <p><b>Local:</b> Rua Rui boto de Souza, 623 casa 3</p>
+    <a href="https://wa.me/5511949484952?text=Confirmo%20presença%20no%20aniversário!" class="btn">Confirmar presença</a>
     <br>
     <button class="sound-btn" onclick="playAudio()">🔊 Ativar Som</button>
   </div>
 
   <audio id="bg-music" loop>
-    <source src="assets/bg-music.mp3" type="audio/mpeg">
+    <source src="assets/fundo.mp3" type="audio/mpeg">
   </audio>
 
   <script>
