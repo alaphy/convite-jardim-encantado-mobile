@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Jardim Encantado</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #fdf6f9, #e1f7e7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #e86aa1;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1em;
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e86aa1;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 15px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #c8568c;
+    }
+
+    .sound-btn {
+      display: inline-block;
+      background: #8ac926;
+      color: white;
+      padding: 10px 18px;
+      margin-top: 10px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Animações */
+    .butterfly {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url("assets/butterfly.png") no-repeat center/contain;
+      animation: fly 12s linear infinite;
+      opacity: 0.8;
+    }
+
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url("assets/flower.png") no-repeat center/contain;
+      animation: float 15s ease-in-out infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes fly {
+      0% { top: 100%; left: 10%; }
+      50% { top: 20%; left: 80%; transform: rotate(20deg);}
+      100% { top: -10%; left: 40%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="butterfly"></div>
+  <div class="flower" style="left:5%; bottom:10%;"></div>
+  <div class="flower" style="right:5%; bottom:15%; animation-delay:3s;"></div>
+
+  <div class="card">
+    <h1>🌸 Jardim Encantado 🌸</h1>
+    <p>Venha comemorar comigo meu <b>1º aninho</b>!</p>
+    <p><b>Data:</b> 13/09/2025</p>
+    <p><b>Local:</b> Salão Encantado, Rua das Borboletas, 123</p>
+    <a href="https://wa.me/5599999999999?text=Confirmo%20presença%20no%20aniversário!" class="btn">Confirmar presença</a>
+    <br>
+    <button class="sound-btn" onclick="playAudio()">🔊 Ativar Som</button>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="assets/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playAudio() {
+      document.getElementById('bg-music').play();
+    }
+  </script>
+</body>
+</html>
